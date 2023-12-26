@@ -23,7 +23,7 @@ export async function authenticatedMiddleware(
       );
     }
 
-    const newRefreshToken: string = generateJWTRefreshToken(decoded.email);
+    const newRefreshToken= generateJWTRefreshToken(decoded.email);
 
     cookieStore.set("refreshToken", newRefreshToken, {
       httpOnly: true,

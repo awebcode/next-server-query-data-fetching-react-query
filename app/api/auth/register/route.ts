@@ -1,4 +1,3 @@
-import bcrypt from "bcrypt";
 import db from "@/utils/db";
 import { UserModel } from "@/utils/userModel";
 import { NextRequest, NextResponse } from "next/server";

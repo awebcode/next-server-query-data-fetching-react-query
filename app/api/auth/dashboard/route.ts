@@ -1,11 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { cookies, headers } from "next/headers";
-import { authenticatedMiddleware } from "@/utils/middleware";
-import { NextApiRequest } from "next";
+
 //,statusText:"wow great status text!"
-export async function GET(req: NextApiRequest, res: NextResponse, next: any) {
-  const data = await authenticatedMiddleware(req, res, next);
-  console.log(data);
+export async function GET(req: NextRequest, res: NextResponse, next: any) {
+ 
 
   return NextResponse.json(
     {
