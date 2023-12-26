@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Lines&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body{
+    @apply mx-auto overflow-x-hidden
+  }
+  input {
+    @apply p-2 rounded-md px-4 border-2 border-gray-800 block;
+  }
+}
+@layer utilities {
+}
+@layer components {
+  .h1 {
+    @apply text-5xl font-extrabold text-gray-800 tracking-tight  uppercase bg-yellow-50 text-center m-4 p-2;
+  }
+  .h2 {
+    @apply text-4xl font-extrabold text-gray-800 tracking-tight  uppercase bg-yellow-50 text-center m-4 p-2;
+  }
+  .btn {
+    @apply px-8 bg-gray-900 text-white p-2 py-3 my-2 m-1 hover:bg-gray-700 duration-300  rounded-md;
+  }
+}
+
+body {
+  font-family: "Rubik Lines", sans-serif; /* Apply Rubik Lines font to the entire body */
+}
