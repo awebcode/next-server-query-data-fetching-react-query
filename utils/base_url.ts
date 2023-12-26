@@ -1,1 +1,1 @@
-export const BASE_URL = "https://next-server-query-data-fetching-designhill.vercel.app/api";
+export const BASE_URL = "https://next-server-query-data-fetching.vercel.app/api";
