@@ -8,7 +8,7 @@ const TodoComponent = () => {
   const [loading, setloading] = useTransition();
   const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
-     const [active, setactive] = useState<boolean>(true);
+     const [active, setactive] = useState("");
   const [message, setMessage] = useState("");
   const formRef = useRef(null);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -58,8 +58,8 @@ const TodoComponent = () => {
           />
         </div>
         <select className="p-2 m-2 w-full rounded-sm" value={active} onChange={(e) => setactive(e.target.value)}>
-          <option className="bg-gray-300" value={true}>true</option>
-          <option value={false}>false</option>
+          <option className="bg-gray-300" value="true">true</option>
+          <option value="false">false</option>
         </select>
 
         <div className="flex items-center justify-between">
