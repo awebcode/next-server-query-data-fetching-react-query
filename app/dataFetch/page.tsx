@@ -4,7 +4,7 @@ import { todoModel } from "@/utils/todoMode";
 import Fetch from "./Fetch";
 import Search from "./Search";
 import Pagination from "./Pagination";
-import { GetTodos } from "../actions/todoActions";
+import { GetTodos } from "../functions/todoActions";
 import TodoComponent from "@/components/todo/Todo";
 import ResetQuery from "./ResetQuery";
 import Loading from "@/components/Loading";

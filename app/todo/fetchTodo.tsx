@@ -1,3 +1,4 @@
+import { BASE_URL } from "@/utils/base_url";
 import React from "react";
 import DeleteButton from "./DeleteButton";
 import TodoList from "./TodoQuery";
@@ -8,7 +9,7 @@ export interface Todo {
   active: boolean;
 }
 export async function fetchTodo(query: string | number) {
-  const res = await fetch(`/api/todo?search=${query}`, {
+  const res = await fetch(`${BASE_URL}/todo?search=${query}`, {
     cache: "no-cache",
     next: {
       tags: ["todos"],
