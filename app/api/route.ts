@@ -1,12 +1,13 @@
 import { NextResponse } from "next/server";
-import { cookies, headers } from "next/headers";
 
-export async function GET(res: NextResponse) {
+export async function GET() {
   
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
+
+  const data=await response.json()
   // console.log("x", res.headers);
   return NextResponse.json({
     message: "wow! asikur amazing!",
-    response: await response.json()
+    data
   });
 }
