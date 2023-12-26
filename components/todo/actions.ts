@@ -1,10 +1,9 @@
 "use server";
 
-import { BASE_URL } from "@/utils/base_url";
 import { revalidateTag } from "next/cache";
 
 export async function createTodo(title: any, description: any, active:any) {
-  const response = await fetch(`${BASE_URL}/todo`, {
+  const response = await fetch(`/api/todo`, {
     method: "POST",
     body: JSON.stringify({ title, description,active }),
   });
@@ -18,7 +17,7 @@ export async function createTodo(title: any, description: any, active:any) {
 //delete
 
 export async function deleteTodo(id: any) {
-  const response = await fetch(`${BASE_URL}/todo/${id}`, {
+  const response = await fetch(`/api/todo/${id}`, {
     method: "DELETE",
   });
   const data = await response.json();
