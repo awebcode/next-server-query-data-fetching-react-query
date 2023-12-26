@@ -10,8 +10,8 @@ export default async function Home({searchParams}:any) {
   const data = await todoModel.find();
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="h1 text-rose-400">ServerSide -Queries</h1>
+    <div className="container mx-auto p-3">
+      <h1 className="h1 text-gray-800 bg-white">ServerSide -Queries</h1>
       <HomeDataFetch searchParams={searchParams} />
     </div>
   );
