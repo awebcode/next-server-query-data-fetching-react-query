@@ -26,7 +26,7 @@ export async function GetTodos({ search, page, limit, sortBy }: any) {
   if (sortBy === "active") {
     sortOptions = { createdAt: -1 }; // Sort by active (true/false) first, then by createdAt
   } else {
-    sortOptions = { createdAt: 1 }; // Sort by createdAt by default
+    sortOptions = { createdAt: -1 }; // Sort by createdAt by default
   }
   const data: any[] = await todoModel
     .find(query)
