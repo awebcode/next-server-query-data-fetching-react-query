@@ -1,6 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
 import todoSlices from "./services/todoSlices";
-import { composeWithDevTools } from "redux-devtools-extension";
 
 export const makeStore = () => {
   return configureStore({
