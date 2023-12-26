@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ReactPaginate from "react-paginate";
+import { Todo } from "./fetchTodo";
 
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
@@ -58,7 +59,7 @@ const TodoList = () => {
         </select>
       </div>
       <ul className="mt-8">
-        {todos.map((todo) => (
+        {todos.map((todo:Todo) => (
           <li key={todo._id} className="border rounded p-4 mb-4">
             <h3 className="font-bold">{todo.title}</h3>
             <p>{todo.desc}</p>
@@ -66,7 +67,6 @@ const TodoList = () => {
           </li>
         ))}
       </ul>
-      {console.log("todoslength", todos.length)}
       <div className="mt-8 flex justify-center">
         <ReactPaginate
           previousLabel="Previous"
